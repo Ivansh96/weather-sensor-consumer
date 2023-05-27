@@ -1,6 +1,6 @@
 
-import model.dto.Measurement;
-import model.dto.MeasurementResponse;
+import dto.Measurement;
+import dto.MeasurementResponse;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
@@ -12,10 +12,11 @@ public class DrawChart {
 
         List<Double> temperatures = getTemperatures();
 
-        for(Double d : temperatures) {
+        for (Double d : temperatures) {
             System.out.println(d);
         }
     }
+
     private static List<Double> getTemperatures() {
         final RestTemplate restTemplate = new RestTemplate();
         String url = "http://localhost:8080/measurements";
@@ -28,6 +29,5 @@ public class DrawChart {
         return jsonResponse.getMeasurementList().stream().map(Measurement::getValue)
                 .collect(Collectors.toList());
     }
-
-    }
+}
 

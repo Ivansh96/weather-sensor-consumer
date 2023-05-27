@@ -1,4 +1,4 @@
-package model.dto;
+package dto;
 
 public class Measurement {
     private Sensor sensor;

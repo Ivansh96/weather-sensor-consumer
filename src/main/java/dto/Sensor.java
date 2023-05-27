@@ -1,7 +1,6 @@
-package model.dto;
+package dto;
 
 public class Sensor {
-
     private String name;
 
     public String getName() {

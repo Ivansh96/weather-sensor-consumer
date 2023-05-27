@@ -1,4 +1,6 @@
-package model.dto;
+package dto;
+
+import dto.Measurement;
 
 import java.util.List;
 
